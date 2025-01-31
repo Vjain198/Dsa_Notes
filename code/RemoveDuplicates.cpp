@@ -1,24 +1,27 @@
 #include <iostream>
-#include <vector>
 using namespace std;
-
-int main()
+int removeDuplicates(int arr[], int n)
 {
-    vector<int> arr = {1, 1, 2, 2, 3, 3};
-    int n = arr.size();
     int i = 0;
     for (int j = 1; j < n; j++)
     {
         if (arr[i] != arr[j])
         {
-            arr[i + 1] = arr[j];
             i++;
+            arr[i] = arr[j];
         }
     }
-    // Print only unique elements
-    for (int j = 0; j <= i; j++) // Change made here to include the last unique element
+    return i + 1;
+}
+int main()
+{
+    int arr[] = {1, 1, 2, 2, 2, 3, 3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int k = removeDuplicates(arr, n);
+    cout << "The array after removing duplicate elements is " << endl;
+    for (int i = 0; i < k; i++)
     {
-        cout << arr[j] << " ";
+        cout << arr[i] << " ";
     }
     cout << endl;
 }
