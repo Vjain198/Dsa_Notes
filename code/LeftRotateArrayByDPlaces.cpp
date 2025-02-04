@@ -4,7 +4,7 @@ using namespace std;
 
 void leftRotateArrayByDPlaces(vector<int> &arr, int n, int d)
 {
-    //d = d % n;
+    d = d % n;
     vector<int> temp;
     for (int i = 0; i < d; i++)
     {

@@ -19,7 +19,7 @@ void moveZeroes(vector<int> &nums)
 
     // find non-zeros and swap it with j
 
-    for (int i = j + 1; i < n; i++)
+    for (int i = j + 1; i <n; i++)
     {
         if (nums[i] != 0)
         {
